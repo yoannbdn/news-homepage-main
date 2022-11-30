@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | News homepage</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+    <header>
+      <img src="./assets/images/logo.svg" alt="logo">
+      <nav>
+        <ul class="navbar">
+          <li><a href="">Home</a></li>
+          <li><a href="">New</a></li>
+          <li><a href="">Popular</a></li>
+          <li><a href="">Trending</a></li>
+          <li><a href="">Categories</a></li>
+        </ul>
+
+        <div id="navMenu">
+          <div id="switcher" class="navSwitcher" onclick="myFunction()">
+            <div class="topbar"></div>
+            <div class="midbar"></div>
+            <div class="bottombar"></div>
+          </div>
+          <ul id="sidebar" class="mobileList">
+            <li><a href="">Home</a></li>
+            <li><a href="">New</a></li>
+            <li><a href="">Popular</a></li>
+            <li><a href="">Trending</a></li>
+            <li><a href="">Categories</a></li>
+          </ul>
+        </div>
+      </nav>
+      <script>
+        function myFunction() {
+          document.getElementById('switcher').classList.toggle("switched");
+          document.getElementById('sidebar').classList.toggle("switched");
+        }
+      </script>
+    </header>
+    <main>
+      <article id="leftSection">
+        <img src="./assets/images/image-web-3-desktop.jpg" alt="">
+        <section>
+          <h1>The Bright Future of Web 3.0?</h1>
+          <div>
+            <p>
+              We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+            </p>
+            <button type="button">Read more</button>
+          </div>
+        </section>
+      </article>
+      <aside>
+        <h2>New</h2>
+        <section>
+          <h3>Hydrogen VS Electric Cars</h3>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </section>
+        <section>
+          <h3>The Downsides of AI Artistry</h3>
+          <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        </section>
+        <section>
+          <h3>Is VC Funding Drying Up?</h3>
+          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </section>
+      </aside>
+    <article id="bottomSection">
+      <section>
+        <img src="./assets/images/image-retro-pcs.jpg" alt="retro-pc">
+        <div>
+          <h4>01</h4>
+          <h3>Reviving Retro PCs</h3>
+          <p>What happens when old PCs are given modern upgrades? </p>
+        </div>
+      </section>
+      <section>
+        <img src="./assets/images/image-top-laptops.jpg" alt="laptop">
+        <div>
+          <h4>02</h4>
+          <h3>Top 10 Laptops of 2022</h3>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </section>
+      <section>
+        <img src="./assets/images/image-gaming-growth.jpg" alt="console controller">
+        <div>
+          <h4>03</h4>
+          <h3>The Growth of Gaming</h3>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </section>
+    </article>
+    </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/yoannbdn">YOANN BAUDRIN</a>.
+  </footer>
+</body>
+</html>

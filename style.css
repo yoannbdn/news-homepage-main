@@ -1,0 +1,324 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  max-width: 1110px;
+  margin: auto;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format(truetype), url(./assets/fonts/static/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: url(./assets/fonts/static/Inter-Bold.ttf) format(truetype);
+}
+@font-face {
+  font-family: "Inter-ExtraBold";
+  src: url(./assets/fonts/static/Inter-ExtraBold.ttf) format(truetype);
+}
+body {
+  font-family: "Inter";
+}
+
+h1, span {
+  font-family: "Inter-ExtraBold";
+}
+
+h2, h3, h4 {
+  font-family: "Inter-Bold";
+  letter-spacing: 1px;
+  transition: 0.5s ease-in-out;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  color: hsl(35deg, 77%, 62%);
+  font-size: 2.2em;
+}
+
+p, li, a, a:visited {
+  color: hsl(236deg, 13%, 42%);
+  line-height: 2;
+  font-size: 0.9em;
+  transition: 0.5s ease-in-out;
+}
+
+h4 {
+  font-size: 1.5em;
+  color: hsl(233deg, 8%, 79%);
+}
+
+article div button {
+  height: 47px;
+  width: 185px;
+  border: none;
+  background-color: hsl(5deg, 85%, 63%);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: hsl(36deg, 100%, 99%);
+  transition: 0.5s ease-in-out;
+}
+article div button:hover {
+  background-color: hsl(240deg, 100%, 5%);
+  cursor: pointer;
+}
+
+#navMenu #switcher.navSwitcher {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.2s;
+}
+#navMenu #switcher.navSwitcher div {
+  height: 5%;
+  width: 95%;
+  background-color: black;
+  transition: 0.6s;
+}
+#navMenu #switcher.switched .topbar {
+  transform: rotate(225deg);
+  position: relative;
+  top: 26%;
+}
+#navMenu #switcher.switched .midbar {
+  opacity: 0;
+}
+#navMenu #switcher.switched .bottombar {
+  transform: rotate(-225deg);
+  position: relative;
+  bottom: 26%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr, 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+}
+
+#leftSection {
+  grid-area: 1/1/2/3;
+}
+
+aside {
+  grid-area: 1/3/2/4;
+}
+
+#bottomSection {
+  grid-area: 2/1/3/4;
+}
+
+header,
+.navbar,
+#sidebar.mobileList {
+  display: flex;
+}
+
+header {
+  margin: 80px 0 50px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  height: 40px;
+  width: 65px;
+}
+
+nav .navbar,
+nav .mobileList {
+  list-style-type: none;
+}
+nav .navbar li a,
+nav .mobileList li a {
+  text-decoration: none;
+}
+nav .navbar li a:hover,
+nav .mobileList li a:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+nav .navbar li {
+  margin-left: 45px;
+  font-size: 1em;
+}
+nav #navMenu {
+  height: 100vh;
+  width: 50vh;
+}
+nav #navMenu #switcher.navSwitcher {
+  position: absolute;
+  z-index: 999;
+  right: 20px;
+  top: 80px;
+}
+nav #navMenu #sidebar.mobileList {
+  position: absolute;
+  top: 0;
+  right: 0;
+  list-style-type: none;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  background-color: white;
+  opacity: 0;
+  flex-direction: column;
+  padding: 175px 0 0 25px;
+  transition: 0.5s ease;
+}
+nav #navMenu #sidebar.mobileList li a {
+  font-size: 2em;
+  color: hsl(240deg, 100%, 5%);
+}
+nav #navMenu #sidebar.mobileList li a:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+nav #navMenu #sidebar.switched {
+  opacity: 100%;
+  width: 255px;
+  box-shadow: -50px 50px 50px 150vh rgba(0, 0, 0, 0.47);
+}
+
+#leftSection section,
+#leftSection div,
+#bottomSection,
+#bottomSection section,
+#bottomSection section div {
+  display: flex;
+}
+
+#leftSection div,
+#bottomSection section div {
+  flex-direction: column;
+}
+
+#leftSection img {
+  margin: auto;
+  max-width: 100%;
+  max-height: 300px;
+  min-width: 50%;
+}
+#leftSection div {
+  justify-content: space-around;
+  align-items: center;
+}
+
+#bottomSection {
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+#bottomSection section {
+  width: 30%;
+}
+#bottomSection section img {
+  width: 84px;
+  margin-right: 20px;
+}
+#bottomSection section div {
+  justify-content: space-between;
+}
+#bottomSection section div h3 {
+  font-size: 1em;
+}
+#bottomSection section div h3:hover {
+  color: hsl(5deg, 85%, 63%);
+  cursor: pointer;
+}
+#bottomSection section div p {
+  font-size: 0.8em;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(240deg, 100%, 5%);
+}
+
+aside h2,
+aside section {
+  margin: 15px;
+}
+
+aside section:nth-child(3),
+aside section:nth-child(4) {
+  border-top: 1px solid hsl(236deg, 13%, 42%);
+}
+
+aside h3 {
+  margin: 15px 0 5px 0;
+  color: hsl(36deg, 100%, 99%);
+}
+
+aside h3:hover {
+  color: hsl(35deg, 77%, 62%);
+  cursor: pointer;
+}
+
+aside p {
+  color: hsl(233deg, 8%, 79%);
+  font-weight: lighter;
+}
+
+@media only screen and (max-width: 1140px) {
+  body {
+    margin: 0 15px 0 15px;
+  }
+  header {
+    display: block;
+  }
+  .navbar {
+    display: none;
+  }
+  #navMenu {
+    display: initial;
+  }
+  main,
+article,
+article section,
+article section div {
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    margin: auto;
+  }
+  article,
+aside {
+    width: 100%;
+  }
+  #leftSection section div {
+    min-width: 60%;
+    max-width: 90%;
+    align-items: flex-start;
+  }
+  #bottomSection section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  #bottomSection section div {
+    align-items: flex-start;
+  }
+  #bottomSection :nth-child(2) {
+    margin: 10px 0 10px 0;
+  }
+}
+@media only screen and (min-width: 1141px) {
+  #navMenu {
+    display: none;
+  }
+}
