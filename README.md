@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Link
 
-- Solution URL: (https://yoannbdn.github.io/product-preview-card-component-main/)
+- Solution URL: ([(https://yoannbdn.github.io/news-homepage-main/)])
 
 ## My process
 
